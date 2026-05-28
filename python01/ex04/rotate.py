@@ -6,8 +6,6 @@ def ft_rotate(img):
 
     try:
 
-        # rotated_img = [[img[j][i] for j in range(len(img))] for i in range(len(img[0]))]
-
         rotated_img = np.zeros(
             (img.shape[1], img.shape[0], img.shape[2]), dtype=img.dtype
         )
@@ -18,6 +16,6 @@ def ft_rotate(img):
         rotated = Image.fromarray(rotated_img)
         rotated.save("rotated.jpeg")
 
-    except Exception as e:
-        print(e)
+    except Exception:
         print("error!")
+        raise

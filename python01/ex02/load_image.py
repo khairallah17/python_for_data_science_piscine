@@ -2,7 +2,7 @@ import numpy as np
 from PIL import Image
 
 
-def ft_load(path: str) -> array:
+def ft_load(path: str) -> np.ndarray:
     """
     load specific image file and return as as numpy array
     """
@@ -16,3 +16,4 @@ def ft_load(path: str) -> array:
 
     except Exception:
         print("error!")
+        return np.array([])

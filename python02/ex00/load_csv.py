@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def load(path: str) -> DataFrame:
+def load(path: str) -> pd.DataFrame:
 
     try:
 

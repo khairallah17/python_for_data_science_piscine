@@ -4,14 +4,14 @@ from PIL import Image
 from scipy.ndimage import zoom
 
 
-def zoom_img(img, zoom_factor: float = 2.0):
+def zoom_img(img: np.ndarray, zoom_factor: float = 2.0):
     """
     takes an image and zoom it
     """
 
     try:
 
-        zoomed_array = zoom(img, (zoom_factor, zoom_factor, 1))
+        zoomed_array = np.array(zoom(img, (zoom_factor, zoom_factor, 1)))
         zoomed_array = np.clip(zoomed_array, 0, 255).astype(np.uint8)
 
         orig_h, orig_w = img.shape[:2]
@@ -26,3 +26,4 @@ def zoom_img(img, zoom_factor: float = 2.0):
 
     except Exception:
         print("error!")
+        raise
