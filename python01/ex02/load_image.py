@@ -4,7 +4,13 @@ from PIL import Image
 
 def ft_load(path: str) -> np.ndarray:
     """
-    load specific image file and return as as numpy array
+    loads an image file return its content as an array of RGB format.
+
+    Args:
+        path (str): path of the file to load.
+
+    Returns:
+        np.ndarray: numpy array represents the RGB format of the image.
     """
     try:
 

@@ -1,9 +1,7 @@
-from give_bmi import apply_limit, give_bmi
+from give_bmi import give_bmi, apply_limit
 
-res = give_bmi([2.71, 1.15], [165.3, 38.4])
-
-print(type(res))
-for i in res:
-    print(i)
-
-print(apply_limit(res, 26))
+height = [2.71, 1.15]
+weight = [165.3, 38.4]
+bmi = give_bmi(height, weight)
+print(bmi, type(bmi))
+print(apply_limit("bmi", 26))
